@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # Given a KB, retrieve the KB of the most recent patch this is replacing
 import re
 import sys
@@ -10,7 +11,6 @@ from bs4 import BeautifulSoup
 WINDOWS_KB_FORMAT = re.compile(".*KB(?P<win_kb_number>\d{7}).*")
 WINDOWS_KB_URL = "https://www.catalog.update.microsoft.com/Search.aspx?q="
 WINDOWS_KB_DETAILS_URL = "https://www.catalog.update.microsoft.com/ScopedViewInline.aspx?updateid="
-KB_NUMBER = ""
 
 
 def set_up_args():
